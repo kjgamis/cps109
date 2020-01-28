@@ -7,11 +7,21 @@
 # other digits except the lowest one, use the expression n // 10. Or, if you don't want to be this
 # fancy, first convert the number into a string and work there.
 
+# def only_odd_digits(n):
+#     str_n = str(n)
+#     for i in range(0, len(str_n)):
+#          if str_n[i] == '0' or str_n[i] == '2' or str_n[i] == '4' or str_n[i] == '6' or str_n[i] == '8':
+#             return False
+#     return True
+
 def only_odd_digits(n):
-    str_n = str(n)
-    for i in range(0, len(str_n)):
-         if str_n[i] == '0' or str_n[i] == '2' or str_n[i] == '4' or str_n[i] == '6' or str_n[i] == '8':
+    if n == 0: 
+        return False
+    while n > 0: 
+        num = n % 10
+        if num == 0 or num == 2 or num == 4 or num == 6 or num == 8:
             return False
+        n = n // 10
     return True
 
 print(only_odd_digits(8))              # False
