@@ -9,13 +9,13 @@
 
 def only_odd_digits(n):
     str_n = str(n)
-    for i in range(len(str_n)):
-         if i == '1' or i == '2' or i == '3' or i == '4' or i == '5':
-            return True
+    for i in range(0, len(str_n)):
+         if str_n[i] == '0' or str_n[i] == '2' or str_n[i] == '4' or str_n[i] == '6' or str_n[i] == '8':
+            return False
     return True
 
-print(only_odd_digits(8))
-print(only_odd_digits(1357975313579))
-print(only_odd_digits(42))
-print(only_odd_digits(71358))
-print(only_odd_digits(0))
+print(only_odd_digits(8))              # False
+print(only_odd_digits(1357975313579))  # True
+print(only_odd_digits(42))             # False
+print(only_odd_digits(71358))          # False
+print(only_odd_digits(0))              # False
